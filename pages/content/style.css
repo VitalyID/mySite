@@ -1,0 +1,135 @@
+.content__wrap {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__left {
+    width: 48%;
+}
+
+.content__right {
+    width: 48%;
+}
+
+
+
+h1 {
+    margin-bottom: 15px;
+}
+
+li {
+    display: block;
+    color: black;
+    font-weight: normal;
+    list-style: none;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+li a:hover {
+    color: #993b10;
+    font-weight: 600;
+}
+
+.content__bild,
+.content__GAZ,
+.content__kmu,
+.content__finansy,
+.content__ir,
+.content__changing,
+.content__transport,
+.content__company {
+    border: solid 1px black;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+    padding-right: 0;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.content__img {
+    display: flex;
+    width: 35%;
+    align-items: center;
+}
+
+.content__img img {
+    width: 100%;
+    float: left;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.content__short,
+.content__short2 {
+
+    border: solid 3px #e65717;
+    border-radius: 20px;
+    width: 100%;
+    padding-bottom: 15px;
+
+    margin-bottom: 25px;
+}
+
+.content__short {
+    display: none;
+}
+
+.content__unit {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content__text {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+@media (max-width:1200px) {
+    .content__wrap {
+        display: block;
+    }
+
+    .content__left,
+    .content__right {
+        width: 100%;
+    }
+
+    .content__unit {
+        /* display: flex; */
+        width: 100%;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+    }
+
+    .content__short {
+        display: block;
+    }
+
+    .content__short2 {
+        display: none
+    }
+
+    ;
+}
+
+@media (max-width:750px) {
+    .content__img {
+        display: none;
+    }
+
+    .content__text {
+        width: 100%;
+    }
+
+    li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

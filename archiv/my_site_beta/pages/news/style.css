@@ -1,0 +1,86 @@
+html,
+.body {
+    height: 100%;
+}
+
+.wrap {
+
+    display: grid;
+    height: 100%;
+    border: solid 1px;
+    grid-template-rows: 50px 1fr 150px;
+    grid-template-columns: 1fr 3fr;
+    /* grid-template-columns: clamp (190px, 300px) 1fr; */
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+
+}
+
+
+.wrap header {
+    /* background-color: aqua; */
+    grid-area: header;
+}
+
+.wrap aside {
+    /* background-color: blueviolet; */
+    grid-area: aside;
+
+}
+
+.wrap main {
+    /* background-color: brown; */
+    grid-area: main;
+}
+
+.wrap footer {
+    /* background-color: chocolate; */
+    grid-area: footer;
+}
+
+.author {
+    font-size: calc(var(--font-sizeP)/3*2);
+}
+
+
+/* ///////////////////////////////// */
+
+/* Стили aside */
+
+/* ///////////////////////////////// */
+
+ol {
+    margin-top: 20px;
+}
+
+.actual {
+    color: #E65717;
+}
+
+li {
+    color: black;
+    font-weight: normal;
+}
+
+@media (max-width:900px) {
+    :root {
+        --margContSide: 5px 10px 0;
+    }
+}
+
+@media (max-width:600px) {
+    .wrap {
+
+        grid-template-rows: 50px 200px 1fr 150px;
+        grid-template-columns: 1fr;
+        /* grid-template-columns: clamp (190px, 300px) 1fr; */
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+
+    }
+}

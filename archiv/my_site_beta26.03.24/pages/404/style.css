@@ -1,0 +1,109 @@
+:root {
+    /* Переменные body */
+    --margContSide: 15px 45px 0;
+
+    /* Переменные main */
+
+    --font-sizeP: 20px;
+    --line-heightP: 28px;
+    --padTop-P: 14px;
+
+    --font-sizeLI: 18px;
+    --line-heightLi: 20px;
+    --padTopLi: 10px;
+    --padLeftLi: 40px;
+
+    /* Аккардеон */
+
+    --padLeftParameters: 50px;
+    --marginTOP: 15px;
+    --akkardIten: 27px;
+
+}
+
+p {
+    line-height: inherit;
+    padding-top: var(--padTop-P);
+    font-size: inherit;
+    text-align: justify;
+}
+
+
+
+/* ////////////////////////////////////// */
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+.body-img {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main__phone {
+    color: #e65717;
+    font-weight: var(--font-weightHeadPhone);
+    font-style: normal;
+    margin-top: var(--marginTopTitle);
+}
+
+.c404 {
+    margin-top: 20svh;
+}
+
+main {
+    flex-grow: 1;
+    background-image: url("../../static/images/404.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+}
+
+
+
+
+
+/* ////////////////////////////////////////// */
+
+/* Медиа-запросы */
+
+/* ////////////////////////////////////////// */
+
+
+
+
+
+@media (max-width: 900px) {
+    main {
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        background-size: 80%;
+    }
+
+    .c404 {
+        margin-top: 10svh;
+    }
+
+}
+
+/* @media (max-width: 00px) {
+    main {
+        background-size: 80%;
+    }
+
+    .c404 {
+        margin-top: 10svh;
+    }
+
+
+} */

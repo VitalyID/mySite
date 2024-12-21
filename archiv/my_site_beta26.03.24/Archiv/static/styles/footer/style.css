@@ -1,0 +1,175 @@
+#container-footer {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(204, 204, 204);
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
+
+}
+
+.footer__wrap {
+    display: flex;
+    margin: 15px 45px 0 45px;
+}
+
+.footer__about {
+    width: 50%;
+    /* padding: 50px; */
+    text-align: justify;
+    margin-right: 15px;
+}
+
+.footer__about-text>p {
+    margin-top: 15px;
+}
+
+.footer__license {
+    padding-top: var(--padTop-P);
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer__license .link-a {
+    color: black;
+    font-weight: normal;
+    ;
+}
+
+
+
+
+
+.footer__contacts-me {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.footer__contacts-me-title {
+    display: block;
+}
+
+.footer__cont-data {
+    text-align: center;
+}
+
+.footer__contact-phone {
+    display: flex;
+    margin: 15px 0 0 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__contact-phone-logo {
+    width: 30%;
+}
+
+
+.logo {
+    text-align: right;
+    width: 100%;
+}
+
+.logo img {
+    width: 34px;
+}
+
+.footer__contact-phonenumber {
+    width: 70%;
+}
+
+.footer__contact-phonenumber a,
+.footer__contact-mail-text a {
+    color: black;
+    font-weight: 500;
+}
+
+.logo-value {
+    padding-left: 50px;
+    text-align: left;
+    width: 100%;
+}
+
+.footer__contact-mail {
+    display: flex;
+    margin: 15px 15px 0px 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__contact-mail-logo {
+    width: 30.5%;
+}
+
+.footer__contact-mail-text {
+    width: 69%;
+}
+
+.footer__contact-mail-text p,
+.footer__contact-phonenumber p {
+    padding-top: 0;
+}
+
+.footer__contacts-me .footer__license {
+    display: none;
+}
+
+
+@media (max-width:750px) {
+    .footer__about {
+        display: none;
+    }
+
+    .footer__contacts-me {
+        width: 100%;
+    }
+
+    .footer__contacts-me .footer__license {
+        display: block;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    .desktop {
+        display: none;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    .footer__wrap {
+        margin: 15px 15px 0 15px;
+    }
+
+    .footer__contacts-me {
+        margin-left: 0;
+    }
+
+    #container-footer {
+        /* border-radius: 0; */
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+@media (max-width:470px) {
+    .footer__contact-phone {
+        margin: 15px 0 0 5px;
+
+    }
+
+    .footer__contact-mail {
+        margin: 15px 0px 0px 0px;
+
+    }
+
+    #container-footer {
+        border-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}

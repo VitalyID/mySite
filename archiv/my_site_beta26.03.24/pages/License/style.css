@@ -1,0 +1,31 @@
+ol {
+    counter-reset: item;
+    padding-left: 5px;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li {
+    padding-left: 2px;
+}
+
+
+.license__list li {
+    display: block;
+    margin-left: 20px;
+    text-align: left;
+}
+
+ol li:before {
+    content: counters(item, ".") ". ";
+    margin-right: 20px;
+    counter-increment: item;
+}
+
+@media (max-width:400px) {
+    h1 {
+        font-size: 25px;
+    }
+}

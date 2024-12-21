@@ -1,0 +1,106 @@
+<ifModule mod_headers.c>
+    #кэшировать HTML и HTM файлы на один день
+<ifModule mod_headers.c>
+    #кэшировать HTML и HTM файлы на один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    #кэшировать CSS, JavaScript и текстовые файлы на одну неделю
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    #кэшировать флэш и изображения на месяц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+    #отключить кэширование
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+ 
+<IfModule mod_setenvif.c>
+  BrowserMatch "MSIE" force-no-vary
+  BrowserMatch "Mozilla/4.[0-9]{2}" force-no-vary
+</IfModule>
+
+ErrorDocument 404 http://20-66-744.xn--p1ai/404.html
+
+RewriteEngine On
+RewriteBase /
+#RewriteCond %{REQUEST_URI} ^\/$
+#RewriteCond %{HTTP_HOST} ^([^www].*)$
+#RewriteRule ^(.*)$ http://www.%1/$1 [L,R=301]
+
+#RewriteCond %{REQUEST_URI} !\?
+#RewriteCond %{REQUEST_URI} !\&
+#RewriteCond %{REQUEST_URI} !\=
+#RewriteCond %{REQUEST_URI} !\.
+#RewriteCond %{REQUEST_URI} \/$
+#RewriteCond %{HTTP_HOST} ^www\.(.*)$
+#RewriteRule ^(.*)\/$ http://www.%1/$1 [L,R=301]
+
+#RewriteCond %{REQUEST_URI} !\?
+#RewriteCond %{REQUEST_URI} !\&
+#RewriteCond %{REQUEST_URI} !\=
+#RewriteCond %{REQUEST_URI} !\.
+#RewriteCond %{REQUEST_URI} !\/$
+#RewriteCond %{HTTP_HOST} ^([^www].*)$
+#RewriteRule ^(.*)$ http://www.%1/$1 [L,R=301]
+
+#RewriteCond %{REQUEST_URI} !\?
+#RewriteCond %{REQUEST_URI} !\&
+#RewriteCond %{REQUEST_URI} !\=
+#RewriteCond %{REQUEST_URI} !\.
+#RewriteCond %{REQUEST_URI} \/$
+#RewriteCond %{HTTP_HOST} ^([^www].*)$
+#RewriteRule ^(.*)\/$ http://www.%1/$1 [L,R=301]
+#####################################
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ https://20-66-744.xn--p1ai/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://20-66-744.xn--p1ai/ [R=301,L]
+####################################
+#Redirect 301 /index https://ВАШ_САЙТ
+
+
+
+Options +FollowSymLinks
+RewriteEngine On
+
+<IfModule mod_php5.c>
+
+	# Устанавливаем кодировку UTF-8
+	AddDefaultCharset	UTF-8
+
+</IfModule>
+
+<IfModule mod_php7.c>
+
+	# Устанавливаем кодировку UTF-8
+	AddDefaultCharset	UTF-8
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+	# Редирект домена с WWW на домен без WWW
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$
+	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+	# Перенаправляем с HTTPS на HTTP
+	#RewriteCond %{SERVER_PORT} ^443$ [OR]
+	#RewriteCond %{HTTPS} =on
+	#RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+	# Убираем index.html на конце
+	RewriteCond %{REQUEST_URI} ^(.*)/index\.html$
+	RewriteRule ^(.*)index\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+</IfModule>
+

@@ -1,0 +1,151 @@
+:root {
+    /* Переменные body */
+    --margContSide: 15px 45px 0;
+
+    /* Переменные main */
+
+    --font-sizeP: 20px;
+    --line-heightP: 28px;
+    --padTop-P: 14px;
+
+    --font-sizeLI: 18px;
+    --line-heightLi: 20px;
+    --padTopLi: 10px;
+    --padLeftLi: 40px;
+
+    /* Аккардеон */
+
+    --padLeftParameters: 50px;
+    --marginTOP: 15px;
+    --akkardIten: 27px;
+
+}
+
+p {
+    line-height: inherit;
+    padding-top: var(--padTop-P);
+    font-size: inherit;
+    text-align: justify;
+}
+
+
+
+/* ////////////////////////////////////// */
+
+
+
+
+.body-img {
+    height: 100%;
+    /* display: grid; */
+    /* grid-template-rows: 1fr; */
+}
+
+
+.main__phone {
+    color: #e65717;
+    font-weight: var(--font-weightHeadPhone);
+    font-style: normal;
+    margin-top: var(--marginTopTitle);
+}
+
+.remote-areas {
+    min-height: calc(100vh - 171.531px)
+}
+
+.hr-line {
+    margin-top: var(--marginTOP);
+}
+
+.grad {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+
+
+/* ////////////////////////////////////////// */
+
+/* Медиа-запросы */
+
+/* ////////////////////////////////////////// */
+
+
+
+@media (max-width: 2300px) {
+    :root {
+        --font-sizeP: 18px;
+        --line-heightP: 25.2px;
+        --line-heightLi: 18px;
+        --padLeftParameters: 10px;
+        --padTop-P: 12px;
+        --akkardIten: 24px;
+    }
+}
+
+@media (max-width: 2000px) {
+    :root {
+        --font-sizeP: 16px;
+        --line-heightP: 22.4px;
+        --line-heightLi: 18px;
+        --padLeftParameters: 20px;
+        --padTopLi: 10px
+    }
+}
+
+@media (max-width: 1800px) {
+    :root {
+        --padTopLi: 8px;
+        --line-heightP: 22.4px;
+    }
+}
+
+@media (max-width: 1600px) {
+    :root {
+        --font-sizeP: 18px;
+        --line-heightP: 25.2px;
+        --akkardIten: 18px
+    }
+}
+
+@media (max-width: 750px) {
+    :root {
+        --font-sizeP: 12px;
+        --line-heightP: 16.8px;
+        --akkardIten: 12px;
+        --font-sizeLI: 12px;
+        --line-heightLi: 16.8px;
+        --padTopLi: 10px;
+    }
+
+    .remote-areas {
+        min-height: calc(100vh - 154.281px)
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --font-sizeP: 16px;
+        --line-heightP: 22.4px;
+        --akkardIten: 16px;
+        --padLeftLi: 15px;
+        --margContSide: 5px 10px 0;
+        --font-sizeLI: 16px;
+        --line-heightLi: 22.4px;
+    }
+
+    .remote-areas {
+        min-height: calc(100vh - 149.672px)
+    }
+}
+
+@media (max-width: 470px) {
+    .remote-areas {
+        min-height: calc(100vh - 164.562px)
+    }
+}

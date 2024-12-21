@@ -1,0 +1,196 @@
+.transport__wrap {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "transport__gaz5m transport__gaz6m"
+        "transport__gaz4mz transport__gaz4mo"
+        "transport__gaz3mz transport__gaz3mo"
+        "transport__3tz transport__3tz"
+        "transport__5t transport__5tm";
+}
+
+.transport__gaz5m {
+    grid-area: transport__gaz5m;
+}
+
+.transport__gaz6m {
+    grid-area: transport__gaz6m;
+}
+
+.transport__gaz4mz {
+    grid-area: transport__gaz4mz;
+}
+
+.transport__gaz4mo {
+    grid-area: transport__gaz4mo;
+}
+
+.transport__gaz3mz {
+    grid-area: transport__gaz3mz;
+}
+
+.transport__gaz3mo {
+    grid-area: transport__gaz3mo;
+}
+
+.transport__3tz {
+    grid-area: transport__3tz;
+}
+
+.transport__5t {
+    grid-area: transport__5t;
+}
+
+.transport__5tm {
+    grid-area: transport__5tm;
+}
+
+
+
+.hr-line {
+    margin-top: var(--marginTOP);
+    display: none;
+}
+
+.grad {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 40px;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+/* ////////////////////////////// */
+/* Тестовая блокировка начало */
+/* ////////////////////////////// */
+/* .transport__gaz5m, */
+/* .transport__gaz6m,
+.transport__gaz4mz,
+.transport__gaz4mo,
+.transport__gaz3mz,
+.transport__gaz3mo,
+.transport__3tz,
+.transport__5t,
+.transport__5tm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transport__3tz {
+    padding: 0 200px;
+}
+
+.transport__3tz .transport__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.transport__img {
+    width: 48%;
+
+}
+
+main img {
+    width: 100%;
+    border: solid 10px;
+    border-color: #C5C5C5;
+    padding: 10px;
+}
+
+.transport__about {
+    width: 48%;
+}
+
+@media (max-width:1300px) {
+    .transport__img {
+        width: 99%;
+    }
+
+    .transport__about {
+        width: 98%;
+    }
+
+    .transport__gaz5m,
+    .transport__gaz6m,
+    .transport__gaz4mz,
+    .transport__gaz4mo,
+    .transport__gaz3mz,
+    .transport__gaz3mo,
+    .transport__3tz,
+    .transport__5t,
+    .transport__5tm {
+        display: block;
+    }
+
+    .transport__3tz {
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .transport__3tz .transport__img {
+        width: 48%;
+    }
+
+    .transport__3tz .transport__about {
+        display: flex;
+        width: 48%;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width:800px) {
+    .transport__wrap {
+        display: block;
+    }
+
+    .transport__3tz {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .transport__3tz .transport__img {
+        width: 98%;
+        display: block;
+        width: 100%;
+    }
+
+    .transport__3tz .transport__about {
+        width: 98%;
+        display: block;
+        width: 100%;
+    }
+
+    .hr-line {
+        display: block;
+    }
+
+    img {
+        margin-top: 15px;
+    }
+}  */
+
+/* ////////////////////////////// */
+/* Тестовая блокировка конец */
+/* ////////////////////////////// */

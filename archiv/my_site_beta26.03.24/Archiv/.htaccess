@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+<IfModule mod_rewrite.c>
+
+	# Убираем index.html на конце
+	RewriteCond %{REQUEST_URI} ^(.*)/index\.html$
+	RewriteRule ^(.*)index\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
+
+</IfModule>
+
